@@ -1,0 +1,142 @@
+.getOurApp {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -89px;
+        top: -109px;
+        width: 277.25px;
+        height: 294.15px;
+
+        //left: 281.43px;
+        //top: 161.56px;
+
+        background: #0949d9;
+        filter: blur(156.83px);
+        transform: rotate(156.9deg);
+    }
+
+    &::after {
+        content: "";
+
+        /* Ellipse 5 */
+
+        position: absolute;
+        right: -153px;
+        top: -303.44px;
+        width: 296.89px;
+        height: 346.3px;
+        background: #30e025;
+        filter: blur(103.845px);
+        transform: rotate(63.13deg);
+    }
+
+    &__bg {
+        &--1 {
+            position: absolute;
+            left: 25.32px;
+            top: 34.38px;
+            border-radius: 32.0419px;
+            width: 236.2px;
+            height: 511.15px;
+            box-shadow: 0 0.958535px 23.9634px rgba(69, 42, 124, 0.1);
+
+            /* iPhone 13 / 13 Pro - 2 */
+
+            box-sizing: border-box;
+            background: linear-gradient(
+                86.16deg,
+                rgba(255, 255, 255, 0.2) 11.14%,
+                rgba(255, 255, 255, 0.035) 113.29%
+            );
+            transform: rotate(-12.56deg);
+            backdrop-filter: blur(28.0366px);
+
+            &::after {
+                //content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                border: 1px solid transparent;
+                border-radius: 24px;
+                background: linear-gradient(
+                    155.31deg,
+                    rgba(255, 255, 255, 0.5) 12.33%,
+                    rgba(255, 255, 255, 0) 34.31%,
+                    rgba(255, 255, 255, 0) 52.66%,
+                    rgba(255, 255, 255, 0.54) 74.67%
+                ),
+                    linear-gradient(
+                    304.95deg,
+                    #2cc295 18.35%,
+                    rgba(255, 255, 255, 0) 95.99%
+                );
+                background-origin: padding-box, border-box;
+                background-clip: padding-box, border-box;
+            }
+        }
+
+        &--2 {
+            position: absolute;
+            right: -51px;
+            top: 34px;
+
+            /* Note: backdrop-filter has minimal browser support */
+            border-radius: 32.0419px;
+            width: 236.2px;
+            height: 511.15px;
+            box-shadow: 0 0.958535px 23.9634px rgba(69, 42, 124, 0.1);
+            background: linear-gradient(
+                86.16deg,
+                rgba(255, 255, 255, 0.2) 11.14%,
+                rgba(255, 255, 255, 0.035) 113.29%
+            );
+            transform: rotate(3.04deg);
+            backdrop-filter: blur(28.0366px);
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: -142.89px;
+                width: 183.58px;
+                height: 194.78px;
+                background: #0949d9;
+                filter: blur(103.845px);
+                transform: rotate(63.13deg);
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        width: 170.64px;
+        height: 56px;
+        background: rgba(0, 0, 0, 0.16);
+
+        img {
+            width: 122.64px;
+        }
+
+        @include desktop {
+            transition: all 0.5s ease-in;
+            &:hover {
+                background: $color-theme-hover;
+            }
+        }
+    }
+}

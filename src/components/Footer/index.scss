@@ -1,0 +1,80 @@
+.footer {
+    position: relative;
+    z-index: 1;
+    margin-top: 160px;
+    padding: 48px 0 40px;
+    background: #0f1012;
+
+    &__container {
+        position: relative;
+        margin: 0 auto;
+        max-width: 1164px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding-bottom: 24px;
+    }
+
+    &__logo {
+        width: 99px;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 24px;
+
+        li {
+            a {
+                font-size: 14px;
+                line-height: 20px;
+                color: rgba(255, 255, 255, 0.6);
+                transition: all 0.5s ease-in;
+
+                @include desktop {
+                    &:hover {
+                        color: $color-theme-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__copyright {
+        font-size: 12px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    &__production {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.6);
+        gap: 8px;
+
+        a {
+            display: flex;
+            font-size: 12px;
+            line-height: 16px;
+            color: rgba(255, 255, 255, 0.6);
+            gap: 4px;
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

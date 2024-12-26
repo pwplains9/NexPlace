@@ -1,0 +1,39 @@
+.ourProducts {
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    &__card {
+        flex: 0 0 calc(100% / 3 - 16px);
+        padding: 32px 24px;
+        text-align: center;
+
+        &-image {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        &--1 {
+            .ourProducts__card-image {
+                width: 132px;
+                height: 132px;
+            }
+        }
+
+        &--2 {
+            .ourProducts__card-image {
+                width: 144.79px;
+                height: 132px;
+            }
+        }
+
+        &--3 {
+            .ourProducts__card-image {
+                width: 138.34px;
+                height: 132px;
+            }
+        }
+    }
+}
