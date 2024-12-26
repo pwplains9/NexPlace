@@ -1,5 +1,5 @@
 <template>
-    <div  class="faq">
+    <div class="faq">
         <CustomTitle className="title--md text-center mb-40"> FAQ</CustomTitle>
 
         <div class="faq__items">

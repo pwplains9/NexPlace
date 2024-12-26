@@ -206,8 +206,8 @@
     line-height: 22px;
     color: $color-white;
     background: $color-theme;
-    gap: 8px;
     transition: all 0.5s ease-in;
+    gap: 8px;
 
     svg {
         width: 24px;
@@ -219,14 +219,13 @@
     }
 
     &--border {
+        @include desktop {
+        }
+
         border: 1px solid $color-theme;
         border-radius: 12px;
         color: $color-white;
         background: transparent;
-
-        @include desktop {
-
-        }
     }
 
     &--bg {
@@ -267,7 +266,6 @@
                 background: transparent;
             }
         }
-
     }
 
     @include devices {
@@ -465,17 +463,15 @@
             justify-content: center;
             border-radius: 12px;
             height: 36px;
-            cursor: pointer;
-
             font-size: 14px;
             line-height: 20px;
-
             color: rgba(255, 255, 255, 0.6);
             transition: all 0.5s linear;
+            cursor: pointer;
 
             &.is-active {
-                background: #1a1d21;
                 color: $color-white;
+                background: #1a1d21;
             }
         }
     }
@@ -511,14 +507,10 @@
     }
 
     &__forgot {
-
         font-weight: 500;
         font-size: 12px;
         line-height: 16px;
-
         color: $color-theme;
-
-
         cursor: pointer;
     }
 
@@ -576,8 +568,9 @@
         display: none;
 
         &:checked + .checkbox__span {
-            background: #2cc295;
             border: 1px solid #fff;
+            background: #2cc295;
+
             svg {
                 display: block;
             }
@@ -588,7 +581,6 @@
         position: relative;
         flex-shrink: 0;
         border: 1px solid rgba(255, 255, 255, 0.4);
-
         border-radius: 4px;
         width: 16px;
         height: 16px;
@@ -633,15 +625,12 @@
     gap: 8px;
 
     input {
+        border: 1px solid #ffffff1f;
+        border-radius: 12px;
         padding: 0 10px;
         width: 44px;
-        height:52px;
+        height: 52px;
         text-align: center;
-
-        border-radius: 12px;
-
-
-        border: 1px solid #FFFFFF1F;
 
         &::-webkit-inner-spin-button,
         .no-spin::-webkit-outer-spin-button {
@@ -655,39 +644,32 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
-
-
+    text-align: center;
     color: rgba(255, 255, 255, 0.4);
 
     span {
         color: $color-white;
     }
-    text-align: center;
 }
 
 .popup__qr {
     margin: 0 auto;
     width: 200px;
     height: 200px;
-
-
 }
 
-.popup_stitle  {
-    font-size: 14px;
+.popup_stitle {
     font-weight: 500;
+    font-size: 14px;
     line-height: 20px;
     text-align: center;
-
 }
 
-.popup_stext  {
-
-    font-size: 12px;
+.popup_stext {
     font-weight: 400;
+    font-weight: 300;
+    font-size: 12px;
     line-height: 16px;
     text-align: center;
-    color: #FFFFFF99;
-font-weight: 300;
-
+    color: #fff9;
 }

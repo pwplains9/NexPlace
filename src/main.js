@@ -8,7 +8,7 @@ import { createPinia } from "pinia";
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/pages/Home/Home.vue";
 import Vue3Marquee from "vue3-marquee";
-import VueScrollTo from "vue-scrollto"
+import VueScrollTo from "vue-scrollto";
 const app = createApp(App);
 
 let baseURL = import.meta.env.BASE_URL;
@@ -78,7 +78,7 @@ components.forEach((component) => {
 
 app.use(vhFix.init);
 app.use(pinia);
-app.use(VueScrollTo)
+app.use(VueScrollTo);
 app.use(router);
 app.use(Vue3Marquee);
 app.mount("#app");

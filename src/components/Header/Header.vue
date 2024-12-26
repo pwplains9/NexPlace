@@ -5,7 +5,9 @@
         </router-link>
         <ul class="header__list">
             <li v-for="link in headerData">
-                <a v-scroll-to="'#' + link.url" :href="link.url">{{ link.name }}</a>
+                <a v-scroll-to="'#' + link.url" :href="link.url">{{
+                    link.name
+                }}</a>
             </li>
         </ul>
         <div class="header__right">

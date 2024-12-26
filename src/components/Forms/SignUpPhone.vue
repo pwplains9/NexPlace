@@ -57,7 +57,8 @@
         </div>
 
         <div class="text--form text-center">
-            Have an account? <span class="color-theme" @click="closePopup">Sign in</span>
+            Have an account?
+            <span class="color-theme" @click="closePopup">Sign in</span>
         </div>
     </Form>
 </template>
@@ -66,7 +67,7 @@
 import * as Yup from "yup";
 const { baseDir, signUpOpen, popups } = useHelperStore();
 import { ErrorMessage, Field, Form } from "vee-validate";
-import {useHelperStore} from '../../stores/helpersStore.js';
+import { useHelperStore } from "../../stores/helpersStore.js";
 const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
@@ -82,19 +83,17 @@ const schema = Yup.object().shape({
 });
 
 const onSubmit = (values) => {
-    console.log(JSON.stringify(values, null, 2))
+    console.log(JSON.stringify(values, null, 2));
     if (JSON.stringify(values, null, 2)) {
         popups.signUpOpen = false;
         popups.phoneConfigOpen = true;
-   }
-
-
+    }
 };
 
 const closePopup = () => {
-    popups.signInOpen =  true;
+    popups.signInOpen = true;
     popups.signUpOpen = false;
-}
+};
 </script>
 
 <style scoped></style>

@@ -49,7 +49,7 @@
                     data-tab="phone"
                     :class="{ 'is-active': activeTab === 'qr' }"
                 >
-                  <SignInQR />
+                    <SignInQR />
                 </div>
             </div>
         </div>
@@ -65,9 +65,9 @@ import { lockScroll } from "../../utils/lock-scroll.js";
 import { ref } from "vue";
 import SignUpEmail from "../Forms/SignUpEmail.vue";
 import SignUpPhone from "../Forms/SignUpPhone.vue";
-import SignInEmail from '../Forms/SignInEmail.vue';
-import SignInPhone from '../Forms/SignInPhone.vue';
-import SignInQR from '../Forms/SignInQR.vue';
+import SignInEmail from "../Forms/SignInEmail.vue";
+import SignInPhone from "../Forms/SignInPhone.vue";
+import SignInQR from "../Forms/SignInQR.vue";
 
 const { baseDir, signUpOpen, popups } = useHelperStore();
 

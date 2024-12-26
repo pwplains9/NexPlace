@@ -62,7 +62,7 @@ const props = defineProps({
     },
     forGot: {
         type: Boolean,
-    }
+    },
 });
 
 const passToggle = ref(false);

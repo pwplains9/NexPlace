@@ -51,8 +51,9 @@
             </div>
         </div>
 
-        <div class="text--form text-center" >
-            Don’t have an account?  <span class="color-theme" @click="closePopup">Sign up</span>
+        <div class="text--form text-center">
+            Don’t have an account?
+            <span class="color-theme" @click="closePopup">Sign up</span>
         </div>
     </Form>
 </template>
@@ -80,7 +81,7 @@ const onSubmit = (values) => {
 const closePopup = () => {
     popups.signInOpen = false;
     popups.signUpOpen = true;
-}
+};
 </script>
 
 <style scoped></style>
