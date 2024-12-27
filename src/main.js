@@ -9,6 +9,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/pages/Home/Home.vue";
 import Vue3Marquee from "vue3-marquee";
 import VueScrollTo from "vue-scrollto";
+import "aos/dist/aos.css";
 const app = createApp(App);
 
 let baseURL = import.meta.env.BASE_URL;

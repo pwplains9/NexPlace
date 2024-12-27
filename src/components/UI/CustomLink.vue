@@ -1,7 +1,9 @@
 <template>
-    <a :href="props.link" :class="'link ' + props.className"
-        >{{ props.name }}
-        <!--        <svg-icon v-if="props.arrow" name="arrow"/>-->
+    <a
+        :href="props.link"
+        :class="'link ' + props.className"
+        v-html="props.name"
+    >
     </a>
 </template>
 

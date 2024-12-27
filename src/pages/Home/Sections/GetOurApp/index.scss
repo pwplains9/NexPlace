@@ -10,10 +10,6 @@
         top: -109px;
         width: 277.25px;
         height: 294.15px;
-
-        //left: 281.43px;
-        //top: 161.56px;
-
         background: #0949d9;
         filter: blur(156.83px);
         transform: rotate(156.9deg);
@@ -21,9 +17,6 @@
 
     &::after {
         content: "";
-
-        /* Ellipse 5 */
-
         position: absolute;
         right: -153px;
         top: -303.44px;
@@ -117,6 +110,12 @@
         align-items: center;
         justify-content: center;
         gap: 24px;
+
+        @include devices {
+            flex-flow: column;
+            padding: 0 24px;
+            gap: 16px;
+        }
     }
 
     &__button {
@@ -130,6 +129,10 @@
 
         img {
             width: 122.64px;
+
+            @include devices {
+                width: 139px;
+            }
         }
 
         @include desktop {
@@ -139,5 +142,13 @@
                 background: $color-theme-hover;
             }
         }
+
+        @include devices {
+            width: 100%;
+        }
+    }
+
+    @include devices {
+        padding: 32px 0;
     }
 }

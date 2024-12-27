@@ -3,36 +3,56 @@
         display: flex;
         flex-wrap: wrap;
         gap: 24px;
+
+        @include devices {
+            gap: 16px;
+        }
     }
 
     &__card {
-        flex: 0 0 calc(100% / 3 - 16px);
         padding: 32px 24px;
         text-align: center;
 
         &-image {
+            @include devices {
+            }
+
             margin-right: auto;
             margin-left: auto;
         }
 
-        &--1 {
-            .keyBenefits__card-image {
-                width: 140.61px;
-                height: 132px;
+        @include desktop {
+            flex: 0 0 calc(100% / 3 - 16px);
+
+            &--1 {
+                .keyBenefits__card-image {
+                    width: 140.61px;
+                    height: 132px;
+                }
+            }
+
+            &--2 {
+                .keyBenefits__card-image {
+                    width: 139.09px;
+                    height: 132px;
+                }
+            }
+
+            &--3 {
+                .keyBenefits__card-image {
+                    width: 132px;
+                    height: 132px;
+                }
             }
         }
 
-        &--2 {
-            .keyBenefits__card-image {
-                width: 139.09px;
-                height: 132px;
-            }
-        }
+        @include devices {
+            padding: 29px 16px;
+            width: 100%;
 
-        &--3 {
-            .keyBenefits__card-image {
-                width: 132px;
-                height: 132px;
+            &-image {
+                width: 100px;
+                height: 94.9px;
             }
         }
     }

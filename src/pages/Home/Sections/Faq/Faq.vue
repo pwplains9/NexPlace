@@ -1,10 +1,15 @@
 <template>
     <div class="faq">
-        <CustomTitle className="title--md text-center mb-40"> FAQ</CustomTitle>
+        <CustomTitle
+            data-aos="fade-right"
+            className="title--md text-center mb-40 mb-sm-25"
+        >
+            FAQ</CustomTitle
+        >
 
-        <div class="faq__items">
+        <div class="faq__items" data-aos="fade-up">
             <FaqItem
-                v-for="item in data"
+                v-for="(item, index) in data"
                 :title="item.title"
                 :text="item.text"
                 :open="item.open"

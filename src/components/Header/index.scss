@@ -31,6 +31,45 @@
                         color: $color-theme-hover;
                     }
                 }
+
+                @include devices {
+                    font-weight: 600;
+                    font-size: vc(20);
+                    line-height: vc(24);
+                    text-align: center;
+                    color: $color-white;
+                }
+            }
+        }
+
+        @include devices {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 10;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            height: var(--vh);
+            background: rgba(33, 36, 41, 0.88);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease-in;
+            backdrop-filter: blur(12px);
+            gap: 40px;
+
+            &-close {
+                position: absolute;
+                right: 16px;
+                top: 16px;
+                width: 32px;
+                height: 32px;
+            }
+
+            &.is-active {
+                opacity: 1;
+                visibility: visible;
             }
         }
     }
@@ -38,5 +77,25 @@
     &__right {
         display: flex;
         gap: 24px;
+
+        @include devices {
+            gap: 8px;
+        }
+    }
+
+    @include devices {
+        padding: 16px;
+        transition: all 0.5s ease-in;
+
+        &__left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        &__burger {
+            width: 24px;
+            height: 24px;
+        }
     }
 }

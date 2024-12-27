@@ -1,13 +1,22 @@
 <template>
     <div class="intro">
         <div class="intro__left">
-            <CustomTitle className="title--lg mb-30 mb-sm-15"
+            <CustomTitle
+                data-aos="fade-right"
+                className="title--lg mb-30 mb-sm-25"
                 >Your <span class="color-theme">All-in-One</span> Platform
             </CustomTitle>
-            <Text className=" lh-28 mb-45"
+            <Text
+                data-aos="fade-right"
+                data-aos-delay="200"
+                className=" lh-28 mb-45 mb-sm-25"
                 >Trade Bitcoin. Access Real-World Assets. Unlock Liquidity.
             </Text>
-            <div class="intro__form mb-55">
+            <div
+                data-aos="fade-right"
+                data-aos-delay="400"
+                class="intro__form mb-55 mb-sm-15"
+            >
                 <Form @submit="onSubmit">
                     <Field
                         name="email"
@@ -24,9 +33,13 @@
                     <ErrorMessage name="email" />
                 </Form>
             </div>
-            <div class="intro__continue">
+            <div
+                class="intro__continue mb-sm-70"
+                data-aos="fade-right"
+                data-aos-delay="600"
+            >
                 <span> Or continue with </span>
-                <div class="intro__continue-buttons mt-15">
+                <div class="intro__continue-buttons mt-15 mt-sm-10">
                     <div class="intro__continue-button">
                         <svg-icon name="google" />
                         Google
@@ -38,8 +51,9 @@
                 </div>
             </div>
         </div>
-        <div class="intro__right">
+        <div class="intro__right"   data-aos="fade-left">
             <div
+
                 class="intro__list border-theme"
                 :class="{ 'is-active': openList }"
             >
@@ -80,7 +94,9 @@
                                 <div class="intro__tab-name">
                                     {{ item.name }}
                                 </div>
-                                <div class="intro__tab-sname font-weight--300">
+                                <div
+                                    class="intro__tab-sname font-weight--300 for-desktop"
+                                >
                                     {{ item.sName }}
                                 </div>
                             </div>
@@ -106,7 +122,9 @@
                                 <div class="intro__tab-name">
                                     {{ item.name }}
                                 </div>
-                                <div class="intro__tab-sname font-weight--300">
+                                <div
+                                    class="intro__tab-sname font-weight--300 for-desktop"
+                                >
                                     {{ item.sName }}
                                 </div>
                             </div>
@@ -122,7 +140,10 @@
                 </div>
             </div>
 
-            <div class="intro__news border-theme">
+            <div
+
+                class="intro__news border-theme"
+            >
                 <div class="intro__news-top">
                     <CustomTitle className="title--xxs">News</CustomTitle>
                     <div

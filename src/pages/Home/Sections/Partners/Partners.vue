@@ -1,9 +1,16 @@
 <template>
-    <div class="partners mb-160">
-        <CustomTitle className="title--md mb-40"> Partners</CustomTitle>
+    <div class="partners mb-160 mb-sm-60">
+        <CustomTitle data-aos="fade-right" className="title--md mb-40 mb-sm-25">
+            Partners
+        </CustomTitle>
         <div class="partners__list">
             <Vue3Marquee>
-                <div v-for="item in list" class="border-theme partners__item">
+                <div
+                    v-for="(item, index) in list"
+                    class="border-theme partners__item"
+                    data-aos="fade-up"
+                    :data-aos-delay="index + '00'"
+                >
                     <Image :url="item.url" />
                 </div>
             </Vue3Marquee>

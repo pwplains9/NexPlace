@@ -5,8 +5,14 @@
     padding-top: 116px;
 
     &__left {
-        flex: 1;
-        padding-top: 63px;
+        @include desktop {
+            flex: 1;
+            padding-top: 63px;
+        }
+
+        @include devices {
+            padding-top: 10px;
+        }
     }
 
     &__form {
@@ -19,6 +25,14 @@
                 position: absolute;
                 top: 105%;
                 color: $color-red;
+
+                @include devices {
+                    top: 42%;
+                }
+            }
+
+            @include devices {
+                flex-flow: column;
             }
         }
 
@@ -26,7 +40,6 @@
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 16px;
             padding: 18px 16px;
-            width: 368px;
             height: 56px;
             background: rgba(255, 255, 255, 0.04);
 
@@ -35,6 +48,18 @@
                 font-size: 14px;
                 line-height: 20px;
                 color: rgba(255, 255, 255, 0.4);
+
+                @include devices {
+                    text-align: center;
+                }
+            }
+
+            @include desktop {
+                width: 368px;
+            }
+
+            @include devices {
+                height: 48px;
             }
         }
 
@@ -55,6 +80,10 @@
         &-buttons {
             display: flex;
             gap: 16px;
+
+            @include devices {
+                gap: 7px;
+            }
         }
 
         &-button {
@@ -82,11 +111,19 @@
                     background: $color-theme-hover;
                 }
             }
+
+            @include devices {
+                flex: 1;
+                padding: 14px;
+                width: auto;
+            }
         }
     }
 
     &__right {
-        max-width: 464px;
+        @include desktop {
+            max-width: 464px;
+        }
     }
 
     &__list {
@@ -103,6 +140,10 @@
 
         &.is-active {
             height: auto;
+        }
+
+        @include devices {
+            padding: 24px 16px;
         }
     }
 
@@ -122,6 +163,10 @@
             align-items: center;
             width: 191px;
             gap: 8px;
+
+            @include devices {
+                width: 94px;
+            }
         }
 
         &-ico {
@@ -159,11 +204,12 @@
         }
 
         &-content {
-            display: box;
+            display: -webkit-box;
             overflow: hidden;
             margin-top: 10px;
             font-size: 14px;
             line-height: 25px;
+            text-align: left;
             text-decoration: underline;
             color: rgba(255, 255, 255, 0.6);
             -webkit-box-orient: vertical;
@@ -172,6 +218,17 @@
             &.is-active {
                 display: block;
             }
+
+            @include devices {
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 32px;
+            }
+        }
+
+        @include devices {
+            margin-top: 16px;
+            padding: 16px;
         }
     }
 
@@ -195,6 +252,10 @@
             &.is-active {
                 background: #1a1d21;
             }
+
+            @include devices {
+                min-width: 104px;
+            }
         }
     }
 
@@ -203,5 +264,11 @@
         font-size: 14px;
         line-height: 20px;
         cursor: pointer;
+    }
+
+    @include devices {
+        flex-flow: column;
+        margin-bottom: 60px;
+        text-align: center;
     }
 }

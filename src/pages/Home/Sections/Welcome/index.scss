@@ -3,6 +3,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
+
+        @include devices {
+            flex-flow: column;
+        }
     }
 
     &__card {
@@ -16,6 +20,10 @@
 
         &-inner {
             max-width: 265px;
+
+            @include devices {
+                max-width: 236px;
+            }
         }
 
         &--1 {
@@ -25,6 +33,11 @@
                 width: 333.12px;
                 height: 333.12px;
                 transform: translateY(-50%);
+
+                @include devices {
+                    width: 151px;
+                    height: 188px;
+                }
             }
         }
 
@@ -35,7 +48,17 @@
                 width: 273.8px;
                 height: 291.75px;
                 transform: translateY(-53%);
+
+                @include devices {
+                    right: -63px;
+                    width: 130px;
+                    height: 201.23px;
+                }
             }
+        }
+
+        @include devices {
+            padding: 16px;
         }
     }
 }

@@ -49,6 +49,11 @@
         padding: 24px;
         width: 100%;
         max-width: 388px;
+
+        @include devices {
+            padding: 16px;
+            max-width: 343px;
+        }
     }
 
     &__close {
@@ -58,9 +63,5 @@
         width: 24px;
         height: 24px;
         cursor: pointer;
-    }
-
-    &__stitle {
-        color: red;
     }
 }

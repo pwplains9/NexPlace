@@ -11,7 +11,6 @@
 
     &__item {
         position: relative;
-        flex: 0 0 calc(100% / 2 - 10px);
         padding: 28px 24px;
         transition: 0.35s ease;
 
@@ -27,6 +26,11 @@
             font-weight: 600;
             font-size: 20px;
             line-height: 24px;
+
+            @include devices {
+                font-size: 16px;
+                line-height: 20px;
+            }
         }
 
         &-arrow {
@@ -67,6 +71,15 @@
                 overflow: auto;
                 padding-top: 24px;
                 height: auto;
+
+                @include devices {
+                    padding-top: 16px;
+                }
+            }
+
+            @include devices {
+                font-size: 14px;
+                line-height: 24px;
             }
         }
 
@@ -79,6 +92,16 @@
                 rgba(255, 255, 255, 0.035) 113.29%
             );
             backdrop-filter: blur(28.0366px);
+        }
+
+        @include desktop {
+            flex: 0 0 calc(100% / 2 - 10px);
+        }
+
+        @include devices {
+            flex: 1;
+            border-radius: 24px;
+            padding: 24px 16px;
         }
     }
 }

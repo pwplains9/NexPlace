@@ -40,7 +40,7 @@
             name="Sign up"
         />
         <div class="text--form text-center mb-15">Or continue with</div>
-        <div class="intro__continue-buttons mb-25">
+        <div class="intro__continue-buttons mb-25 mb-sm-15">
             <div class="intro__continue-button">
                 <svg-icon name="google" />
                 Google

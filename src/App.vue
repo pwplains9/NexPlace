@@ -5,6 +5,13 @@ import SignUp from "./components/Popups/SignUp.vue";
 import EmailConfirm from "./components/Popups/EmailConfirm.vue";
 import MobileConfirm from "./components/Popups/MobileConfirm.vue";
 import SignIn from "./components/Popups/SignIn.vue";
+import { onMounted } from "vue";
+import AOS from "aos";
+onMounted(() => {
+    AOS.init({
+        once: true,
+    });
+});
 </script>
 
 <template>

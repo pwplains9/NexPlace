@@ -1,9 +1,16 @@
 <template>
-    <div class="welcome mb-160">
-        <CustomTitle className="title--md text-center mb-15">
+    <div class="welcome mb-160 mb-sm-60">
+        <CustomTitle
+            data-aos="fade-right"
+            className="title--md text-center mb-15 text-left-m"
+        >
             Welcome to NexPlace</CustomTitle
         >
-        <Text className="text-center mb-40">
+        <Text
+            className="text-center mb-40 text-left-m mb-sm-25"
+            data-aos="fade-right"
+            data-aos-delay="200"
+        >
             The ultimate all-in-one platform where Bitcoin meets real-world
             assets</Text
         >
@@ -15,12 +22,14 @@
                     'welcome__card border-theme',
                     `welcome__card--${index + 1}`,
                 ]"
+                data-aos="fade-up"
+                :data-aos-delay="index + '00'"
             >
                 <div class="welcome__card-image">
                     <Image :url="item.image" />
                 </div>
                 <div class="welcome__card-inner">
-                    <CustomTitle className="title--xs mb-15">
+                    <CustomTitle className="title--xs mb-15 mb-sm-10">
                         {{ item.title }}</CustomTitle
                     >
                     <Text className="color-06 font-weight--300 text--xs lh-24">

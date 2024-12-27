@@ -1,6 +1,11 @@
 <template>
-    <div class="keyBenefits mb-160">
-        <CustomTitle className="title--md mb-40"> Key Benefits</CustomTitle>
+    <div class="keyBenefits mb-160 mb-sm-60">
+        <CustomTitle
+            data-aos="fade-right"
+            className="title--md mb-40 text-center-m mb-sm-25"
+        >
+            Key Benefits</CustomTitle
+        >
 
         <div class="keyBenefits__content">
             <div
@@ -9,11 +14,13 @@
                     'keyBenefits__card border-theme',
                     `keyBenefits__card--${index + 1}`,
                 ]"
+                data-aos="fade-up"
+                :data-aos-delay="index + '00'"
             >
-                <div class="keyBenefits__card-image mb-20">
+                <div class="keyBenefits__card-image mb-20 mb-sm-15">
                     <Image :url="item.image" />
                 </div>
-                <CustomTitle className="title--xs mb-10">
+                <CustomTitle className="title--xs mb-10 mb-sm-5">
                     {{ item.title }}</CustomTitle
                 >
                 <Text

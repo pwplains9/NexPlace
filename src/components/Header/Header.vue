@@ -1,13 +1,28 @@
 <template>
-    <header class="header">
-        <router-link :to="baseDir" class="header__logo">
-            <Image url="/images/logo.svg" />
-        </router-link>
-        <ul class="header__list">
+    <header class="header" data-aos="fade-down">
+        <div class="header__left">
+            <div @click="menuOpen = true" class="header__burger for-devices">
+                <svg-icon name="menu-button" />
+            </div>
+            <router-link :to="baseDir" class="header__logo">
+                <Image url="/images/logo.svg" />
+            </router-link>
+        </div>
+
+        <ul class="header__list" :class="{ 'is-active': menuOpen }">
+            <li
+                @click="menuOpen = false"
+                class="header__list-close for-devices"
+            >
+                <svg-icon name="close" />
+            </li>
             <li v-for="link in headerData">
-                <a v-scroll-to="'#' + link.url" :href="link.url">{{
-                    link.name
-                }}</a>
+                <a
+                    @click="menuOpen = false"
+                    v-scroll-to="'#' + link.url"
+                    :href="link.url"
+                    >{{ link.name }}</a
+                >
             </li>
         </ul>
         <div class="header__right">
@@ -19,7 +34,7 @@
             <CustomLink
                 link="/"
                 class-name="link--bg link--header"
-                name="Download App"
+                name="<span class='for-desktop'>Download App</span> <span class='for-devices'>App</span>"
             />
         </div>
     </header>
@@ -27,8 +42,9 @@
 
 <script setup>
 import { useHelperStore } from "@/stores/helpersStore.js";
-import { onMounted, reactive } from "vue";
+import { onMounted, reactive, ref } from "vue";
 import CustomLink from "../UI/CustomLink.vue";
+import SvgIcon from "../UI/SvgIcon.vue";
 
 onMounted(() => {
     console.log(popups);
@@ -57,6 +73,8 @@ const headerData = reactive([
 ]);
 
 const { baseDir, signUpOpen, popups } = useHelperStore();
+
+const menuOpen = ref(false);
 </script>
 
 <style scoped>

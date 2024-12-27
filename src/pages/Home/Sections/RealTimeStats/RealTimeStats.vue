@@ -1,9 +1,12 @@
 <template>
-    <CustomTitle className="title--md text-center mb-40">
+    <CustomTitle
+        data-aos="fade-right"
+        className="title--md text-center mb-40 text-left-m mb-sm-25"
+    >
         Real-Time Stats</CustomTitle
     >
-    <div class="realTimeStats mb-160">
-        <div class="realTimeStats__left">
+    <div class="realTimeStats mb-160 mb-sm-70">
+        <div class="realTimeStats__left" data-aos="fade-right">
             <div
                 class="realTimeStats__item realTimeStats__item--1 border-theme"
             >
@@ -17,7 +20,7 @@
                 </div>
             </div>
         </div>
-        <div class="realTimeStats__right">
+        <div class="realTimeStats__right" data-aos="fade-left">
             <div
                 class="realTimeStats__item realTimeStats__item--2 border-theme"
             >
