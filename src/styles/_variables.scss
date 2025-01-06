@@ -9,6 +9,62 @@ $color-green: #17ff5c;
 $color-red: red;
 $color-theme-hover: #00e7a2;
 
+:root {
+    --black: #{$color-black};
+    --text: rgba(255, 255, 255, 0.6);
+    --logo: #f5f7fa;
+    --color-button: #fff;
+    --border-input: 1px solid rgba(255, 255, 255, 0.12);
+    --bg-input: rgba(255, 255, 255, 0.04);
+    --bg-button: rgba(255, 255, 255, 0.08);
+    --input-placeholder: rgba(255, 255, 255, 0.4);
+    --sub-text: rgba(255, 255, 255, 0.4);
+    --border-theme-bg: linear-gradient(to right, var(--black), var(--black)),
+        linear-gradient(
+            304.95deg,
+            #2cc295 18.35%,
+            rgba(255, 255, 255, 0) 95.99%
+        );
+    --active-tab: #1a1d21;
+    --tab: rgba(255, 255, 255, 0.04);
+    --tab-sname: rgba(255, 255, 255, 0.6);
+    --color-news: rgba(255, 255, 255, 0.6);
+    --getButton: rgba(0, 0, 0, 0.16);
+    --faq-arrow: rgba(255, 255, 255, 0.06);
+    --faq-arrow-color: #fff;
+    --faq-arrow-color-active: #fff;
+    --footer-bg: #0f1012;
+    --footer-color: rgba(255, 255, 255, 0.6);
+    --footer-border: 1px solid rgba(255, 255, 255, 0.12);
+    --header-menu: rgba(33, 36, 41, 0.88);
+    --header-menu-color: #fff;
+}
+
+[data-theme="darkMode"] {
+    --black: #f5f7fa;
+    --text: rgba(63, 63, 63, 0.6);
+    --logo: rgba(63, 63, 63, 0.6);
+    --color-button: #3f3f3f;
+    --border-input: 1px solid rgba(63, 63, 63, 0.12);
+    --bg-input: #fff;
+    --bg-button: rgba(63, 63, 63, 0.08);
+    --input-placeholder: rgba(63, 63, 63, 0.4);
+    --sub-text: rgba(63, 63, 63, 0.4);
+    --border-theme-bg: #fff;
+    --active-tab: rgba(63, 63, 63, 0.08);
+    --tab: rgba(63, 63, 63, 0.04);
+    --tab-sname: rgba(63, 63, 63, 0.6);
+    --getButton: #3f3f3f;
+    --faq-arrow: rgba(63, 63, 63, 0.06);
+    --faq-arrow-color: #2cc295;
+    --faq-arrow-color-active: #3f3f3f;
+    --footer-bg: #ddd;
+    --footer-color: #3f3f3f;
+    --footer-border: 1px solid rgba(63, 63, 63, 0.12);
+    --header-menu: rgba(#f5f7fa, 0.5);
+    --header-menu-color: #3f3f3f;
+}
+
 // FONTS
 $font-name: "FontName", Arial, sans-serif;
 $font-Poppins: "Poppins", serif;

@@ -18,7 +18,8 @@
                 :data-aos-delay="index + '00'"
             >
                 <div class="keyBenefits__card-image mb-20 mb-sm-15">
-                    <Image :url="item.image" />
+                    <Image v-if="!helperStore.themeName" :url="item.image" />
+                    <Image v-else :url="item.imageWhite" />
                 </div>
                 <CustomTitle className="title--xs mb-10 mb-sm-5">
                     {{ item.title }}</CustomTitle
@@ -34,20 +35,26 @@
 
 <script setup>
 import { reactive } from "vue";
+import { useHelperStore } from "../../../../stores/helpersStore.js";
+
+let { helperStore } = useHelperStore();
 
 const data = reactive([
     {
-        image: "/images/image-1.webp",
+        image: `/images/image-1.webp`,
+        imageWhite: `/images/image-1-w.webp`,
         title: "Full Regulation",
         text: "Brief explanation of compliance",
     },
     {
         image: "/images/image-2.webp",
+        imageWhite: `/images/image-2-w.webp`,
         title: "Easy Access",
         text: "Simple interface and instant<br>registration options",
     },
     {
         image: "/images/image-3.webp",
+        imageWhite: `/images/image-3-w.webp`,
         title: "Bitcoin Infrastructure",
         text: "Emphasizing security and transparency",
     },

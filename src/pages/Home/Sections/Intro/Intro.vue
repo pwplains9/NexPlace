@@ -51,9 +51,8 @@
                 </div>
             </div>
         </div>
-        <div class="intro__right"   data-aos="fade-left">
+        <div class="intro__right" data-aos="fade-left">
             <div
-
                 class="intro__list border-theme"
                 :class="{ 'is-active': openList }"
             >
@@ -140,10 +139,7 @@
                 </div>
             </div>
 
-            <div
-
-                class="intro__news border-theme"
-            >
+            <div class="intro__news border-theme">
                 <div class="intro__news-top">
                     <CustomTitle className="title--xxs">News</CustomTitle>
                     <div

@@ -26,7 +26,8 @@
                 :data-aos-delay="index + '00'"
             >
                 <div class="welcome__card-image">
-                    <Image :url="item.image" />
+                    <Image v-if="!helperStore.themeName" :url="item.image" />
+                    <Image v-else :url="item.imageWhite" />
                 </div>
                 <div class="welcome__card-inner">
                     <CustomTitle className="title--xs mb-15 mb-sm-10">
@@ -43,15 +44,20 @@
 
 <script setup>
 import { reactive } from "vue";
+import { useHelperStore } from "../../../../stores/helpersStore.js";
+
+let { helperStore } = useHelperStore();
 
 const data = reactive([
     {
         image: "/images/ico-1.webp",
+        imageWhite: "/images/ico-1-w.webp",
         title: "Trade",
         text: "Trade seamlessly, invest in tokenized assets like bonds and equities, and unlock the full potential of your portfolio",
     },
     {
         image: "/images/ico-2.webp",
+        imageWhite: "/images/ico-2-w.webp",
         title: "Security",
         text: "Use your holdings to access liquidity or engage in advanced financial strategies—all with unmatched security, transparency, and efficiency",
     },

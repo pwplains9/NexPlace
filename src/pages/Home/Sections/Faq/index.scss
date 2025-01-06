@@ -41,7 +41,8 @@
             border-radius: 4px;
             width: 32px;
             height: 32px;
-            background: rgba(255, 255, 255, 0.06);
+            color: var(--faq-arrow-color);
+            background: var(--faq-arrow);
             cursor: pointer;
 
             svg {
@@ -50,6 +51,7 @@
             }
 
             .is-active & {
+                color: var(--faq-arrow-color-active);
                 background: $color-theme;
             }
         }

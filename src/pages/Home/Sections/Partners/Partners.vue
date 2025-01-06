@@ -11,7 +11,7 @@
                     data-aos="fade-up"
                     :data-aos-delay="index + '00'"
                 >
-                    <Image :url="item.url" />
+                    <svg-icon :name="item.url" />
                 </div>
             </Vue3Marquee>
         </div>
@@ -21,28 +21,29 @@
 <script setup>
 import { reactive } from "vue";
 import { Vue3Marquee } from "vue3-marquee";
+import SvgIcon from "../../../../components/UI/SvgIcon.vue";
 
 const list = reactive([
     {
-        url: "/images/partners/cointelegraph.svg",
+        url: "cointelegraph",
     },
     {
-        url: "/images/partners/bloomberg.svg",
+        url: "bloomberg",
     },
     {
-        url: "/images/partners/fortune.svg",
+        url: "fortune",
     },
     {
-        url: "/images/partners/yahoofinance.svg",
+        url: "yahoofinance",
     },
     {
-        url: "/images/partners/decrypt.svg",
+        url: "decrypt",
     },
     {
-        url: "/images/partners/coindesk.svg",
+        url: "coindesk",
     },
     {
-        url: "/images/partners/independent.svg",
+        url: "independent",
     },
 ]);
 </script>

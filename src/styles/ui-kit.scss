@@ -207,7 +207,7 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
-    color: $color-white;
+    color: var(--color-button);
     background: $color-theme;
     transition: all 0.5s ease-in;
     gap: 8px;
@@ -221,18 +221,18 @@
         color: $color-white;
     }
 
-    &--border {
-        @include desktop {
-        }
+    &--color {
+        color: $color-white;
+    }
 
+    &--border {
         border: 1px solid $color-theme;
         border-radius: 12px;
-        color: $color-white;
         background: transparent;
     }
 
     &--bg {
-        background: rgba(255, 255, 255, 0.08);
+        background: var(--bg-button);
     }
 
     &--header {
@@ -333,12 +333,7 @@
 .border-theme {
     border: 1px solid transparent;
     border-radius: 24px;
-    background: linear-gradient(to right, $color-black, $color-black),
-        linear-gradient(
-            304.95deg,
-            #2cc295 18.35%,
-            rgba(255, 255, 255, 0) 95.99%
-        );
+    background: var(--border-theme-bg);
     background-origin: padding-box, border-box;
     background-clip: padding-box, border-box;
 
@@ -360,7 +355,7 @@
         align-items: flex-start;
         border-radius: 12px;
         padding: 2px;
-        background: rgba(255, 255, 255, 0.04);
+        background: var(--tab);
 
         &-link {
             display: flex;
@@ -372,13 +367,13 @@
             font-size: 14px;
             line-height: 20px;
             white-space: nowrap;
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--logo);
             transition: all 0.5s linear;
             cursor: pointer;
 
             &.is-active {
-                color: $color-white;
-                background: #1a1d21;
+                color: var(--color-button);
+                background: var(--active-tab);
             }
         }
     }
@@ -425,12 +420,12 @@
         position: relative;
 
         input {
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border: var(--border-input);
             border-radius: 16px;
             padding: 16px;
             width: 100%;
             height: 52px;
-            background: rgba(255, 255, 255, 0.04);
+            background: var(--bg-input);
 
             &::-webkit-inner-spin-button,
             .no-spin::-webkit-outer-spin-button {
@@ -443,7 +438,7 @@
                 font-size: 14px;
                 line-height: 20px;
                 text-transform: capitalize;
-                color: rgba(255, 255, 255, 0.4);
+                color: var(--input-placeholder);
             }
 
             &[type="number"] {
@@ -475,7 +470,8 @@
         display: none;
 
         &:checked + .checkbox__span {
-            border: 1px solid #fff;
+            border: 1px solid var(--faq-arrow-color);
+            color: var(--border-theme-bg);
             background: #2cc295;
 
             svg {
@@ -487,7 +483,7 @@
     &__span {
         position: relative;
         flex-shrink: 0;
-        border: 1px solid rgba(255, 255, 255, 0.4);
+        border: 1px solid var(--input-placeholder);
         border-radius: 4px;
         width: 16px;
         height: 16px;
@@ -519,7 +515,7 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--sub-text);
 
     span {
         cursor: pointer;
@@ -532,7 +528,7 @@
     gap: 8px;
 
     input {
-        border: 1px solid #ffffff1f;
+        border: var(--border-input);
         border-radius: 12px;
         padding: 0 10px;
         width: 44px;
@@ -552,10 +548,10 @@
     font-size: 12px;
     line-height: 16px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--input-placeholder);
 
     span {
-        color: $color-white;
+        color: var(--color-button);
     }
 }
 
@@ -577,7 +573,7 @@
     font-size: 12px;
     line-height: 16px;
     text-align: center;
-    color: #fff9;
+    color: var(--tab-sname);
 }
 
 .relative {

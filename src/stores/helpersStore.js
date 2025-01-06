@@ -13,6 +13,10 @@ export const useHelperStore = defineStore("helperStore", () => {
 
     let baseDir = import.meta.env.BASE_URL;
 
+    let helperStore = reactive({
+        themeName: false,
+    });
+
     return {
         isDesktop: isDesktop.value,
         baseDir,
@@ -22,5 +26,6 @@ export const useHelperStore = defineStore("helperStore", () => {
         signInOpen: popups.signInOpen,
         emailConfigOpen: popups.emailConfigOpen,
         phoneConfigOpen: popups.phoneConfigOpen,
+        helperStore,
     };
 });

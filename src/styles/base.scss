@@ -37,8 +37,8 @@ body {
     text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
     font-family: $font-Poppins;
-    background: $color-black;
-    color: $color-white;
+    background: var(--black);
+    color: var(--color-button);
 
     &.is-resizing {
         opacity: 0;

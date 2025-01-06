@@ -3,7 +3,7 @@
     z-index: 1;
     margin-top: 160px;
     padding: 48px 0 40px;
-    background: #0f1012;
+    background: var(--footer-bg);
 
     &__container {
         position: relative;
@@ -16,7 +16,7 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 24px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        border-bottom: var(--footer-border);
         padding-bottom: 24px;
 
         @include devices {
@@ -39,7 +39,7 @@
             a {
                 font-size: 14px;
                 line-height: 20px;
-                color: rgba(255, 255, 255, 0.6);
+                color: var(--footer-color);
                 transition: all 0.5s ease-in;
 
                 @include desktop {
@@ -77,7 +77,7 @@
     &__copyright {
         font-size: 12px;
         line-height: 16px;
-        color: rgba(255, 255, 255, 0.6);
+        color: var(--footer-color);
 
         @include devices {
             margin-bottom: 6px;
@@ -89,14 +89,14 @@
         align-items: center;
         font-size: 12px;
         line-height: 16px;
-        color: rgba(255, 255, 255, 0.6);
+        color: var(--footer-color);
         gap: 8px;
 
         a {
             display: flex;
             font-size: 12px;
             line-height: 16px;
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--footer-color);
             gap: 4px;
         }
 

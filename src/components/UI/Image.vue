@@ -1,5 +1,16 @@
 <template>
-    <img :class="props.className" :src="props.url" :alt="props.alt" />
+    <img
+        v-if="!props.isColor"
+        :class="props.className"
+        :src="props.url"
+        :alt="props.alt"
+    />
+    <img
+        v-else
+        :class="props.className"
+        :src="themeName ? props.url : '123'"
+        :alt="props.alt"
+    />
 </template>
 
 <script>
@@ -10,6 +21,8 @@ export default defineComponent({
 });
 </script>
 <script setup>
+import { useHelperStore } from "../../stores/helpersStore.js";
+
 const props = defineProps({
     url: {
         type: String,
@@ -22,6 +35,9 @@ const props = defineProps({
     className: {
         type: String,
         default: "image",
+    },
+    isColor: {
+        type: Boolean,
     },
 });
 </script>

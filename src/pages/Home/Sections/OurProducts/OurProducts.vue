@@ -17,7 +17,8 @@
                 :data-aos-delay="index + '00'"
             >
                 <div class="ourProducts__card-image mb-20 mb-sm-15">
-                    <Image :url="item.image" />
+                    <Image v-if="!helperStore.themeName" :url="item.image" />
+                    <Image v-else :url="item.imageWhite" />
                 </div>
                 <CustomTitle
                     className="title--xs"
@@ -30,18 +31,22 @@
 
 <script setup>
 import { reactive } from "vue";
-
+import { useHelperStore } from "../../../../stores/helpersStore.js";
+let { helperStore } = useHelperStore();
 const data = reactive([
     {
         image: "/images/image-4.webp",
+        imageWhite: `/images/image-4-w.webp`,
         title: "Real Asset<br>Tokenization",
     },
     {
         image: "/images/image-5.webp",
+        imageWhite: `/images/image-5-w.webp`,
         title: "Real-Time<br> Trading",
     },
     {
         image: "/images/image-6.webp",
+        imageWhite: `/images/image-6-w.webp`,
         title: "Transparency and Auditing<br> on Bitcoin's Blockchain",
     },
 ]);

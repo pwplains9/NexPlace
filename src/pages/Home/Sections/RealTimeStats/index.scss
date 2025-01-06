@@ -24,6 +24,10 @@
                     background: url("/images/apperence-1.webp") center center
                         no-repeat;
                     background-size: cover;
+
+                    [data-theme="darkMode"] & {
+                        background-image: url("/images/apperence-1-w.webp");
+                    }
                 }
             }
 
@@ -35,6 +39,10 @@
                     background: url("/images/apperence-2.webp") center center
                         no-repeat;
                     background-size: cover;
+
+                    [data-theme="darkMode"] & {
+                        background-image: url("/images/apperence-2-w.webp");
+                    }
                 }
             }
 
@@ -46,6 +54,10 @@
                     background: url("/images/apperence-3.webp") center center
                         no-repeat;
                     background-size: cover;
+
+                    [data-theme="darkMode"] & {
+                        background-image: url("/images/apperence-3-w.webp");
+                    }
                 }
             }
 
@@ -57,6 +69,10 @@
                     background: url("/images/apperence-4.webp") center center
                         no-repeat;
                     background-size: cover;
+
+                    [data-theme="darkMode"] & {
+                        background-image: url("/images/apperence-4-w.webp");
+                    }
                 }
             }
         }
@@ -69,6 +85,10 @@
                     background: url("/images/apperence-1-mobile.webp") center
                         center no-repeat;
                     background-size: cover;
+
+                    [data-theme="darkMode"] & {
+                        background-image: url("/images/apperence-1-w-mobile.webp");
+                    }
                 }
             }
 
@@ -77,6 +97,10 @@
                     background: url("/images/apperence-2-mobile.webp") center
                         center no-repeat;
                     background-size: cover;
+
+                    [data-theme="darkMode"] & {
+                        background-image: url("/images/apperence-2-w-mobile.webp");
+                    }
                 }
             }
 
@@ -85,6 +109,10 @@
                     background: url("/images/apperence-3-mobile.webp") center
                         center no-repeat;
                     background-size: cover;
+
+                    [data-theme="darkMode"] & {
+                        background-image: url("/images/apperence-3-w-mobile.webp");
+                    }
                 }
             }
 
@@ -93,6 +121,10 @@
                     background: url("/images/apperence-4-mobile.webp") center
                         center no-repeat;
                     background-size: cover;
+
+                    [data-theme="darkMode"] & {
+                        background-image: url("/images/apperence-4-w-mobile.webp");
+                    }
                 }
             }
         }
