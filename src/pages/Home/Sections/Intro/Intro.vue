@@ -4,13 +4,13 @@
             <CustomTitle
                 data-aos="fade-right"
                 className="title--lg mb-30 mb-sm-25"
-                >Your <span class="color-theme">All-in-One</span> Platform
+                >Your Gateway to <span class="color-theme">Real-World</span> Tokenized Assets
             </CustomTitle>
             <Text
                 data-aos="fade-right"
                 data-aos-delay="200"
                 className=" lh-28 mb-45 mb-sm-25"
-                >Trade Bitcoin. Access Real-World Assets. Unlock Liquidity.
+                >Invest & trade in tokenized assets, powered by Bitcoin technology
             </Text>
             <div
                 data-aos="fade-right"
@@ -47,6 +47,10 @@
                     <div class="intro__continue-button">
                         <svg-icon name="apple" />
                         Apple
+                    </div>
+                    <div class="intro__continue-button" @click="popups.continueQR = true">
+                        <svg-icon name="qr" />
+                        QR code
                     </div>
                 </div>
             </div>
@@ -169,6 +173,7 @@ import Button from "../../../../components/UI/Button.vue";
 import SvgIcon from "../../../../components/UI/SvgIcon.vue";
 import { reactive, ref } from "vue";
 import { ErrorMessage, Field, Form } from "vee-validate";
+import {useHelperStore} from '../../../../stores/helpersStore.js';
 
 const list = reactive([
     {
@@ -226,6 +231,8 @@ const list = reactive([
         percent: "+12.05%",
     },
 ]);
+
+const { baseDir, signUpOpen, popups } = useHelperStore();
 
 const activeTab = ref("Popular");
 const openList = ref(false);

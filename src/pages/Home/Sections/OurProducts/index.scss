@@ -2,6 +2,7 @@
     &__content {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 24px;
 
         @include devices {
@@ -16,6 +17,13 @@
         &-image {
             margin-right: auto;
             margin-left: auto;
+            width: 132px;
+            height: 132px;
+
+            img {
+                height: 100%;
+                object-fit: contain;
+            }
 
             @include devices {
                 width: 100px;
@@ -25,6 +33,7 @@
 
         @include desktop {
             flex: 0 0 calc(100% / 3 - 16px);
+            min-height: 396px;
 
             &--1 {
                 .ourProducts__card-image {
@@ -51,6 +60,7 @@
         @include devices {
             padding: 16px 24px;
             width: 100%;
+            min-height: 346px;
         }
     }
 }

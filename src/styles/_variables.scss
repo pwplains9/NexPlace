@@ -38,6 +38,8 @@ $color-theme-hover: #00e7a2;
     --footer-border: 1px solid rgba(255, 255, 255, 0.12);
     --header-menu: rgba(33, 36, 41, 0.88);
     --header-menu-color: #fff;
+    --qr: rgba(255, 255, 255, 0.04);
+    --footer-button: rgba(0, 0, 0, 0.16);
 }
 
 [data-theme="darkMode"] {
@@ -63,6 +65,8 @@ $color-theme-hover: #00e7a2;
     --footer-border: 1px solid rgba(63, 63, 63, 0.12);
     --header-menu: rgba(#f5f7fa, 0.5);
     --header-menu-color: #3f3f3f;
+    --qr: rgba(63, 63, 63, 1);
+    --footer-button: #fff;
 }
 
 // FONTS

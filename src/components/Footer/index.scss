@@ -5,6 +5,30 @@
     padding: 48px 0 40px;
     background: var(--footer-bg);
 
+    &__social {
+        display: flex;
+        gap: 16px;
+
+        &-button {
+            border-radius: 8px;
+            padding: 8px 16px;
+            background: var(--footer-button);
+            transition: all 0.5s linear;
+            cursor: pointer;
+
+            svg {
+                width: 61.32px;
+                height: 16px;
+            }
+
+            @include desktop {
+                &:hover {
+                    background: $color-theme-hover;
+                }
+            }
+        }
+    }
+
     &__container {
         position: relative;
         margin: 0 auto;
@@ -20,15 +44,14 @@
         padding-bottom: 24px;
 
         @include devices {
-            flex-flow: column;
-            align-items: flex-start;
             margin-bottom: 16px;
             padding-bottom: 16px;
         }
     }
 
     &__logo {
-        width: 99px;
+        width: 127px;
+        height: 32px;
     }
 
     &__nav {
@@ -103,6 +126,56 @@
         svg {
             width: 16px;
             height: 16px;
+        }
+    }
+
+    &__center {
+        display: flex;
+        margin-bottom: 24px;
+        border-bottom: var(--footer-border);
+        padding-bottom: 24px;
+        gap: 36px;
+
+        ul {
+            li {
+                margin-bottom: 4px;
+
+                a {
+                    font-size: 14px;
+                    line-height: 24px;
+                    opacity: 0.6;
+                    transition: all 0.5s linear;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            & + .footer__title {
+                margin-top: 24px;
+            }
+        }
+
+        @include devices {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__title {
+        margin-bottom: 12px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__col {
+        @include devices {
+            flex: 0 0 calc(100% / 2 - 18px);
         }
     }
 

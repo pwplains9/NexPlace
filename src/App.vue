@@ -7,6 +7,7 @@ import MobileConfirm from "./components/Popups/MobileConfirm.vue";
 import SignIn from "./components/Popups/SignIn.vue";
 import { onMounted } from "vue";
 import AOS from "aos";
+import ContinueQR from './components/Popups/ContinueQR.vue';
 onMounted(() => {
     AOS.init({
         once: true,
@@ -28,6 +29,7 @@ onMounted(() => {
     <EmailConfirm />
     <MobileConfirm />
     <SignIn />
+    <ContinueQR />
 </template>
 
 <style scoped></style>

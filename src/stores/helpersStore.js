@@ -9,6 +9,7 @@ export const useHelperStore = defineStore("helperStore", () => {
         signInOpen: false,
         emailConfigOpen: false,
         phoneConfigOpen: false,
+        continueQR: false,
     });
 
     let baseDir = import.meta.env.BASE_URL;

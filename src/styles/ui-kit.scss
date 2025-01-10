@@ -332,7 +332,7 @@
 
 .border-theme {
     border: 1px solid transparent;
-    border-radius: 24px;
+    border-radius: 32px;
     background: var(--border-theme-bg);
     background-origin: padding-box, border-box;
     background-clip: padding-box, border-box;
@@ -579,4 +579,10 @@
 .relative {
     position: relative;
     z-index: 1;
+}
+
+.c-qr {
+    border-radius: 24px;
+    padding: 26px;
+    background: var(--qr);
 }

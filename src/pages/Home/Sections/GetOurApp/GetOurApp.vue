@@ -19,11 +19,19 @@
             <a href="" class="getOurApp__button">
                 <Image url="/images/google.svg" />
             </a>
+
+<!--            <div class="getOurApp__button" @click="popups.continueQR = true">-->
+<!--                QR-->
+<!--            </div>-->
         </div>
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import {useHelperStore} from '../../../../stores/helpersStore.js';
+
+const { baseDir, signUpOpen, popups } = useHelperStore();
+</script>
 
 <style scoped>
 @import "./index.scss";

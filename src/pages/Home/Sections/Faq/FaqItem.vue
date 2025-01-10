@@ -14,8 +14,8 @@
             </div>
         </div>
 
-        <div class="faq__item-content" :class="{ 'is-active': props.open }">
-            {{ props.text }}
+        <div class="faq__item-content" :class="{ 'is-active': props.open }" v-html="props.text">
+
         </div>
     </div>
 </template>

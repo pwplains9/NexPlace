@@ -1,7 +1,10 @@
 .keyBenefits {
+    position: relative;
+
     &__content {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 24px;
 
         @include devices {
@@ -14,15 +17,20 @@
         text-align: center;
 
         &-image {
-            @include devices {
-            }
-
             margin-right: auto;
             margin-left: auto;
+            width: 140.61px;
+            height: 132px;
+
+            img {
+                height: 100%;
+                object-fit: contain;
+            }
         }
 
         @include desktop {
             flex: 0 0 calc(100% / 3 - 16px);
+            min-height: 348px;
 
             &--1 {
                 .keyBenefits__card-image {
@@ -49,11 +57,28 @@
         @include devices {
             padding: 29px 16px;
             width: 100%;
+            min-height: 346px;
 
             &-image {
                 width: 100px;
                 height: 94.9px;
             }
+        }
+    }
+
+    [data-theme="darkMode"] & {
+        &::before {
+            content: "";
+            position: absolute;
+            left: -20%;
+            top: -40%;
+            z-index: -1;
+            width: 1347.56px;
+            height: 853.7px;
+            background: linear-gradient(257.81deg, rgba(10, 81, 165, 0.7) 12.19%, rgba(0, 200, 0, 0.7) 93.91%);
+            opacity: 0.4;
+            filter: blur(150px);
+            transform: matrix(-0.98, 0.2, 0.2, 0.98, 0, 0);
         }
     }
 }

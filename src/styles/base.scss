@@ -50,12 +50,10 @@ body {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 120px;
-
+        bottom: 722px;
         height: 648px;
         background: url("/images/bg-bottom.webp") center center no-repeat;
         background-size: cover;
-
         pointer-events: none;
 
         @keyframes glowEl {
@@ -70,6 +68,10 @@ body {
             }
         }
     }
+}
+
+.site-container {
+
 }
 
 main {

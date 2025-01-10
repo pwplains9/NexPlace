@@ -5,7 +5,6 @@
         <Welcome />
         <GetOurApp />
         <OurProducts />
-        <RealTimeStats />
         <Partners />
         <Faq />
     </div>
